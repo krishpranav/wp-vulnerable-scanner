@@ -40,6 +40,7 @@ except ImportError:
 
 #main class for wpscan tool
 class WpScan():
+    #this def function contains only self
     def __init__(self):
         try:
             self.url = sys.argv[1]
