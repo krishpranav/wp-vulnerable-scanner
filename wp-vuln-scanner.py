@@ -9,3 +9,5 @@ import random
 import socket
 import sys
 
+Version = '0.2.0'
+
