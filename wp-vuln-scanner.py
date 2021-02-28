@@ -75,3 +75,26 @@ class WpScan():
                 self.print_logo()
                 self.Wrong2()
                 sys.exit()
+        except socket.gaierror:
+             self.cls()
+            self.print_logo()
+            print y + '---------------------------------------------------'
+            print g + '    [' + y + '+' + g + ']' + r + ' Error: ' + y + '    [ ' + w + \
+                  ' Something worng! target.com without / in end ' + y + ']'
+            sys.exit()
+        except requests.exceptions.ReadTimeout:
+            self.cls()
+            self.print_logo()
+            print y + '---------------------------------------------------'
+            print g + '    [' + y + '+' + g + ']' + r + ' Error: ' + y + '    [ ' + w + \
+                ' ConnectionError! Maybe server Down, Or your ip blocked! ' + y + ']'
+           
+    def __option(self):
+        try:
+            print y + '---------------------------------------------------'
+            print r + '    [' + y + '+' + r + ']' + w + ' usage: ' + g + '    [ ' \
+                + w + ' Python wp-vuln-scanner.py Domain.com ' + g + ']'
+        except:
+            pass
+
+        
