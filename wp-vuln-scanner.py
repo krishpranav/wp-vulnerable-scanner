@@ -59,3 +59,19 @@ class WpScan():
         try:
             ip = socket.gethostbyname(__kill_ip)
             self.CheckWordpress = requests.get('http://' + self.url, timeout=5)
+            if '/wp-content/' in self.CheckWordpress.text:
+                self.cls()
+                self.print_logo()
+                print r + '    [' + y + '+' + r + ']' + w + ' URL      : ' + m + self.url
+                print r + '    [' + y + '+' + r + ']' + w + ' IP Server: ' + m + ip
+                print r + '    [' + y + '+' + r + ']' + w + ' Server   : ' + m + self.CheckWordpress.headers[ 'server']
+                self.UserName_Enumeration()
+                self.CpaNel_UserName_Enumeration()
+                self.Version_Wp()
+                self.GeT_Theme_Name()
+                self.GeT_PluGin_Name()
+            else:
+                self.cls()
+                self.print_logo()
+                self.Wrong2()
+                sys.exit()
