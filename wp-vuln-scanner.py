@@ -6,11 +6,11 @@ sys.setdefaultencoding('utf8')
 
 Version = '0.2.0'  # Fixed Bugs
 
+#trying to check whether all modules are installed
 try:
     import requests
 except ImportError:
     print '---------------------------------------------------'
-    print '[*] pip install requests'
     print '   [-] you need to install requests Module'
     sys.exit()
 
@@ -27,12 +27,11 @@ try:
 
 except ImportError:
     print '---------------------------------------------------'
-    print '[*] pip install colorama'
     print '   [-] you need to install colorama Module'
     sys.exit()
 
 
-class ICGwPScaN():
+class wpscan():
     def __init__(self):
         try:
             self.url = sys.argv[1]
@@ -62,8 +61,8 @@ class ICGwPScaN():
                 self.CpaNel_UserName_Enumeration()
                 self.Version_Wp()
                 self.GeT_Theme_Name()
-                self.GeT_PluGin_Name()
-            else:
+                self.Get_Plugin_Name()
+            else:   
                 self.cls()
                 self.print_logo()
                 self.Worng2()
@@ -244,7 +243,7 @@ class ICGwPScaN():
             print g + '    [' + y + '+' + g + ']' + r + ' Error: ' + y + '    [ ' + w + \
                   ' ConnectionError! Maybe server Down, Or your ip blocked! ' + y + ']'
 
-    def GeT_PluGin_Name(self):
+    def Get_Plugin_Name(self):
         plugin_NamEz = {}
         Dup_Remove_Plug = 'iran-cyber.net'
         a = re.findall('/wp-content/plugins/(.*)', self.CheckWordpress.text)
@@ -321,8 +320,9 @@ class ICGwPScaN():
                 self.Plugin_NamE_Vuln_TeST(x)
             else:
                 print r + '    [' + y + '+' + r + ']' + w + ' Themes Name: ' + m + Name_Theme
-                self.Plugin_NamE_Vuln_TeST(Name_Theme)
+                self.Pluginugin_NamE_Vuln_TeST(Name_Theme)
 
 
-Rock = ICGwPScaN()
-Rock
+
+WpScan = wpscan()
+WpScan
