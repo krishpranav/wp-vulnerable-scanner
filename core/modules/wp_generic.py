@@ -1,8 +1,5 @@
 
 #!/usr/bin/env python 
-# -*- coding:utf-8 -*- 
-# WPSeku - Wordpress Security Scanner 
-# Coded by Momo Outaadi (@M4ll0k) (C) 2017
 
 from core.lib import wp_checker
 from core.lib import wp_colors
