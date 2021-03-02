@@ -1,4 +1,4 @@
-
+#!/usr/bin/env python
 from core.lib import wp_checker
 from core.lib import wp_colors
 from core.lib import wp_print
