@@ -20,7 +20,7 @@ from core.modules import wp_attack
 from core.modules import wp_brute
 
 
-class WPSeku(object):
+class wpscan(object):
 	"""WPSeku Class"""
 	###########################
 	print_ = wp_print.WPPrint()
@@ -79,8 +79,8 @@ class WPSeku(object):
 			url = scheme+"://"+netloc
 			return self.check_.check(url,path) 
 
-	def Main(self):
-		# WPSeku main
+	def wpmain(self):
+		#wpscan main
 		if len(sys.argv) < 2:
 			self.Usage()
 		try:
@@ -163,7 +163,7 @@ class WPSeku(object):
 #####################################
 if __name__ == "__main__":
 	try:
-		main = WPSeku(sys.argv[1:])
-		main.Main()
+		main = wpscan(sys.argv[1:])
+		main.wpmain()
 	except KeyboardInterrupt:
-		sys.exit("KeyboardInterrupt!!")
+		sys.exit("Keyboard Interrupt!!")
